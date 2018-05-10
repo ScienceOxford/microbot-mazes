@@ -5,8 +5,8 @@ from microbit import *
 # @ScienceOxford
 
 '''
-This tells us which of the micro:bit's pins is connected to which input on the motor driver.
-e.g. FL means that it controls the input that turns on the left-hand motor in the forward direction.
+This tells us which of the micro:bit's pins is connected to which input on the motor driver (follow the coloured wires!).
+e.g. FL means that it controls the pin that turns on the left-hand motor in the forward direction.
 '''
 FL = pin14
 BL = pin13
