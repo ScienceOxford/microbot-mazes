@@ -14,8 +14,8 @@ FR = pin12
 BR = pin15
 
 '''
-If the pin is set to HIGH, the motor is turned off.  If it is set to LOW, the motor is on.
-Currently the motors are set to turn on at half speed, as this makes it easier to control.
+If the pin is set to HIGH (1023), the motor is turned off. The lower the number, the faster the motor goes.
+Currently the motors are set to turn on at half speed (511), as this makes it easier to control.
 '''
 on = 511
 off = 1023
