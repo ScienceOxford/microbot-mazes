@@ -23,7 +23,7 @@ off = 1023
 '''
 The following functions define the combination of pins to control direction.
 '''
-def stop(time):
+def stop(time=100):
     display.clear()
     FL.write_analog(off)
     BL.write_analog(off)
@@ -31,41 +31,43 @@ def stop(time):
     BR.write_analog(off)
     sleep(time)
 
-def forward(time):
+def forward(time, speed=on):
     display.show(Image.ARROW_N)
-    FL.write_analog(on)
+    FL.write_analog(speed)
     BL.write_analog(off)
-    FR.write_analog(on)
+    FR.write_analog(speed)
     BR.write_analog(off)
     sleep(time)
+    stop()
 
-def backward(time):
+def backward(time, speed=on):
     display.show(Image.ARROW_S)
     FL.write_analog(off)
-    BL.write_analog(on)
+    BL.write_analog(speed)
     FR.write_analog(off)
-    BR.write_analog(on)
+    BR.write_analog(speed)
     sleep(time)
+    stop()
 
-def left_turn(time):
+def left_turn(time, speed=on):
     display.show(Image.ARROW_W)
     FL.write_analog(off)
-    BL.write_analog(on)
-    FR.write_analog(on)
+    BL.write_analog(speed)
+    FR.write_analog(speed)
     BR.write_analog(off)
     sleep(time)
+    stop()
 
-def right_turn(time):
+def right_turn(time, speed=on):
     display.show(Image.ARROW_E)
-    FL.write_analog(on)
+    FL.write_analog(speed)
     BL.write_analog(off)
     FR.write_analog(off)
-    BR.write_analog(on)
+    BR.write_analog(speed)
     sleep(time)
+    stop()
 
-stop(1)
+stop()
 
-'''
-WRITE YOUR CODE BELOW HERE!
-'''
+# WRITE YOUR CODE ON THE NEXT LINE BELOW HERE
 
