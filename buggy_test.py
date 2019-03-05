@@ -71,3 +71,11 @@ stop()
 
 # WRITE YOUR CODE ON THE NEXT LINE BELOW HERE
 
+while True:
+    if button_a.was_pressed():
+        forward(1000)             # test each direction
+        backward(1000)
+        left_turn(1000, 200)
+        right_turn(1000, 200)
+    if button_b.was_pressed():
+        forward(5000, 0)          # test quick forward, to check how straight it goes
