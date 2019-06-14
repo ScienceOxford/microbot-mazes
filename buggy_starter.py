@@ -51,10 +51,10 @@ def backward(time, speed=on):
 
 def left_turn(time, speed=on):
     display.show(Image.ARROW_W)
-    FL.write_analog(0)
-    BL.write_analog(511)
-    FR.write_analog(511)
-    BR.write_analog(0)
+    FL.write_analog(off)
+    BL.write_analog(speed)
+    FR.write_analog(speed)
+    BR.write_analog(off)
     sleep(time)
     stop()
 
