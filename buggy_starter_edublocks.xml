@@ -591,4 +591,11 @@
       </block>
     </statement>
   </block>
+  <block type="whileout" id="X^6Bh^Lx$+xXk:sNy+:*" x="-3" y="-127">
+    <value name="cond">
+      <shadow type="textinline" id="OsB1f2]e|6LcOB4Z=/k|">
+        <field name="text">True</field>
+      </shadow>
+    </value>
+  </block>
 </xml>
