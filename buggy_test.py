@@ -8,17 +8,17 @@ from microbit import *
 This tells us which of the micro:bit's pins is connected to which input on the motor driver (follow the coloured wires!).
 e.g. FL means that it controls the pin that turns on the left-hand motor in the forward direction.
 '''
-FL = pin14
-BL = pin13
-FR = pin12
-BR = pin15
+FL = pin13
+BL = pin12
+FR = pin15
+BR = pin14
 
 '''
-If the pin is set to HIGH (1023), the motor is turned off. The lower the number, the faster the motor goes.
+If the pin is set to LOW (0), the motor is turned off. The lower the number, the faster the motor goes.
 Currently the motors are set to turn on at half speed (511), as this makes it easier to control.
 '''
 on = 511
-off = 1023
+off = 0
 
 '''
 The following functions define the combination of pins to control direction.
@@ -51,10 +51,10 @@ def backward(time, speed=on):
 
 def left_turn(time, speed=on):
     display.show(Image.ARROW_W)
-    FL.write_analog(off)
-    BL.write_analog(speed)
-    FR.write_analog(speed)
-    BR.write_analog(off)
+    FL.write_analog(0)
+    BL.write_analog(511)
+    FR.write_analog(511)
+    BR.write_analog(0)
     sleep(time)
     stop()
 
@@ -75,7 +75,7 @@ while True:
     if button_a.was_pressed():
         forward(1000)             # test each direction
         backward(1000)
-        left_turn(1000, 200)
-        right_turn(1000, 200)
+        left_turn(1000, 300)
+        right_turn(1000, 300)
     if button_b.was_pressed():
-        forward(5000, 0)          # test quick forward, to check how straight it goes
+        forward(5000, 1023)          # test quick forward, to check how straight it goes
