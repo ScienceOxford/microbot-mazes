@@ -1,4 +1,5 @@
 from microbit import *
+import music
 
 # Please tag us if used!
 # We'd love to see what you make:
@@ -17,7 +18,7 @@ BR = pin14
 If the pin is set to LOW (0), the motor is turned off. The lower the number, the faster the motor goes.
 Currently the motors are set to turn on at half speed (511), as this makes it easier to control.
 '''
-on = 511
+on = 800
 off = 0
 
 '''
@@ -75,7 +76,7 @@ while True:
     if button_a.was_pressed():
         forward(1000)             # test each direction
         backward(1000)
-        left_turn(1000, 300)
-        right_turn(1000, 300)
+        left_turn(1000, 511)
+        right_turn(1000, 511)
     if button_b.was_pressed():
         forward(5000, 1023)          # test quick forward, to check how straight it goes
