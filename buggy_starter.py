@@ -15,16 +15,16 @@ FR = pin15
 BR = pin14
 
 '''
-If the pin is set to LOW (0), the motor is turned off. The lower the number, the faster the motor goes.
-Currently the motors are set to turn on at half speed (511), as this makes it easier to control.
+If the pin is set to LOW (0), the motor is turned off. The higher the number, the faster the motor goes.
+Currently the motors are set to turn on at a low speed (300), as this makes it easier to control.
 '''
-on = 800
+on = 300
 off = 0
 
 '''
 The following functions define the combination of pins to control direction.
 '''
-def stop(time=100):
+def stop(time=500):
     display.clear()
     FL.write_analog(off)
     BL.write_analog(off)
